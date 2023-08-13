@@ -1,5 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
+Resource    ../PageObjects/LoginPage.robot
+Resource    ../PageObjects/HomePage.robot
 
 *** Variables ***
 ${URL}         https://www.saucedemo.com/
@@ -13,3 +15,8 @@ Start Automacao
 Stop Automacao
     Capture Page Screenshot
     Close Browser
+Start Automacao Login
+    Start Automacao
+    Dado que informe os dados de um usuário e senha
+    Quando realizar o login
+    Então serei redirecionado para a tela Products    

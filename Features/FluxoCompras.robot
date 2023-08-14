@@ -16,3 +16,10 @@ Fluxo simples de compra de um produto
     Quando realizar o checkout completo incluindo as informações pessoais
     E confirmando as informações no checkout overview
     Então serei redirecionado para a tela de checkout complete
+
+Fluxo simples de compra de um produto verificando se valor total corresponde ao valor do produto + Frete
+    Dado que inclua o produto Sauce Labs Backpack no carrinho de compras
+    E o consulte na página de carrinho para a realização do checkout
+    Quando realizar o checkout completo incluindo as informações pessoais 
+    E confirmando as informações no checkout overview verificando se o valor total está correto
+    Então serei redirecionado para a tela de checkout complete
